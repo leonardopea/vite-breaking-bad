@@ -3,6 +3,7 @@
 import AppHeader from './components/AppHeader.vue';
 import PokemonList from './components/PokemonList.vue';
 
+
 export default {
   components:{
     AppHeader,
@@ -15,6 +16,7 @@ export default {
 <template>
   <div>
     <AppHeader/>
+    
     <PokemonList/>
   </div>
 </template>

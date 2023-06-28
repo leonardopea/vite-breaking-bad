@@ -1,0 +1,19 @@
+@mixin bottone_circolare{
+    
+    border-radius: 50%;
+  
+}
+
+
+@mixin bottone_grande{
+    border: 5px solid white;
+    height: 100px;
+    width: 100px;
+}
+
+@mixin bottone_piccolo{
+    border: 3px solid white;
+    height: 50px;
+    width: 50px;
+}
+
