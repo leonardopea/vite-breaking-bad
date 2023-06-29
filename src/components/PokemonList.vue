@@ -1,12 +1,33 @@
 <script>
+import axios from 'axios';
+import PokemonCards from './PokemonCards.vue';
 export default {
-    
+    components:{
+        PokemonCards
+    },
+    data(){
+        return{
+            characterList:[]
+        }
+    },
+    mounted(){
+        axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?per=10').then((response) => {
+            this.characterList = response.data.docs;
+        })
+    }
 }
 </script>
 
 <template>
-    <div>
-        <h1>hey</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6" v-for="(character,index) in characterList" :key="index">
+
+                <PokemonCards :mycharacter="character" />
+
+            </div>
+
+        </div>
     </div>
 
 </template>
