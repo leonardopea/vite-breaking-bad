@@ -21,7 +21,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-6" v-for="(character,index) in characterList" :key="index">
+            <div class="col" v-for="(character,index) in characterList" :key="index">
 
                 <PokemonCards :mycharacter="character" />
 
@@ -34,5 +34,18 @@ export default {
 
 
 <style lang="scss" scoped>
+    
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .col{
+        width: calc(100% / 5);
+        }
+    }
+
     
 </style>
