@@ -17,8 +17,10 @@ export default {
 
 <style lang="scss" scoped>
     img{
-        width: 70%;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
+        padding-top: 10px;
         
     }
 
